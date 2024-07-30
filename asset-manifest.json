@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/almosttaklu.github.io/static/css/main.703a3e89.css",
+    "main.js": "/almosttaklu.github.io/static/js/main.590f3c2f.js",
+    "static/js/453.253ccfac.chunk.js": "/almosttaklu.github.io/static/js/453.253ccfac.chunk.js",
+    "static/media/profile.jpg": "/almosttaklu.github.io/static/media/profile.ac861ed13c1a87229829.jpg",
+    "static/media/Blogger.png": "/almosttaklu.github.io/static/media/Blogger.fa803823a2314dc33fd1.png",
+    "static/media/Ganga_Resume.pdf": "/almosttaklu.github.io/static/media/Ganga_Resume.29f8427f6750046382b2.pdf",
+    "static/media/webcrawler.webp": "/almosttaklu.github.io/static/media/webcrawler.430f31ba5ede08f93df4.webp",
+    "index.html": "/almosttaklu.github.io/index.html",
+    "main.703a3e89.css.map": "/almosttaklu.github.io/static/css/main.703a3e89.css.map",
+    "main.590f3c2f.js.map": "/almosttaklu.github.io/static/js/main.590f3c2f.js.map",
+    "453.253ccfac.chunk.js.map": "/almosttaklu.github.io/static/js/453.253ccfac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.703a3e89.css",
+    "static/js/main.590f3c2f.js"
+  ]
+}
