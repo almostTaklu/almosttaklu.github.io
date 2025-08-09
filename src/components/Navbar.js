@@ -15,7 +15,13 @@ import { RiMenu5Fill } from 'react-icons/ri';
 
 import resumePDF from '../assets/Ganga_Resume.pdf';
 
+// Store listeners and a shared dispatcher so the same reference is used for
+// adding and removing the global event handler. Previously an anonymous
+// function was passed to both `addEventListener` and `removeEventListener`,
+// which meant the cleanup never removed the original listener.
 const listeners = new Set();
+const dispatchMouseDown = (evt) => listeners.forEach((l) => l(evt));
+
 function useClickOutside(ref, onOutsideClick, excludeRef) {
   const handler = useCallback(
     (e) => {
@@ -29,15 +35,11 @@ function useClickOutside(ref, onOutsideClick, excludeRef) {
   useEffect(() => {
     listeners.add(handler);
     if (listeners.size === 1)
-      document.addEventListener('mousedown', (evt) =>
-        listeners.forEach((l) => l(evt))
-      );
+      document.addEventListener('mousedown', dispatchMouseDown);
     return () => {
       listeners.delete(handler);
       if (listeners.size === 0)
-        document.removeEventListener('mousedown', (evt) =>
-          listeners.forEach((l) => l(evt))
-        );
+        document.removeEventListener('mousedown', dispatchMouseDown);
     };
   }, [handler]);
 }
